@@ -1,0 +1,16 @@
+{
+  "name": "settings-bill-expressjs",
+  "version": "1.0.0",
+  "description": "In this document we will explore how to create web applications with [ExpressJS](http://http://expressjs.com/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mocha": "^9.1.1"
+  }
+}
