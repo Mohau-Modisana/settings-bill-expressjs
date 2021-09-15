@@ -4,7 +4,8 @@
   "description": "In this document we will explore how to create web applications with [ExpressJS](http://http://expressjs.com/).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"  
+
   },
   "keywords": [],
   "author": "",
