@@ -2,6 +2,11 @@ const express = require('express');
 const exphbs  = require('express-handlebars');
 const bodyParser = require('body-parser');
 const SettingsBill = require('./settings-bill');
+const handlebarSetup = exphbs({
+    partialsDir: "./views/partials",
+    viewPath:  './views',
+    layoutsDir : './views/layouts'
+});
 
 let app = express();
 
@@ -16,9 +21,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.get('/', function(req, res){
-    // res.render('index');
+
     res.render('index', {
-        //  settings: settingsBill.getSettings(),
+         settings: settingsBill.getSettings(),
          totals: settingsBill.totals()
     });
 });
