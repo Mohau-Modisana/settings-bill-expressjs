@@ -13,7 +13,7 @@ let app = express();
 
 const settingsBill = SettingsBill();
 
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.engine('handlebars', exphbs({layoutsDir: './views/layouts'}));
 app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
@@ -58,7 +58,7 @@ app.post('/actions/:actionType', function(req, res){
 });
 
 const PORT = process.env.PORT || 3011;
-listen(process.env.PORT);
+
 
 app.listen(3011, function(){
     console.log('App started at Port: ', PORT)
