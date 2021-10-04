@@ -58,6 +58,7 @@ app.post('/actions/:actionType', function(req, res){
 });
 
 const PORT = process.env.PORT || 3011;
+listen(process.env.PORT);
 
 app.listen(3011, function(){
     console.log('App started at Port: ', PORT)
