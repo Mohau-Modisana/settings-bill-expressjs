@@ -103,7 +103,7 @@ module.exports = function SettingsBill() {
         const reachedWarningLevel = total >= warningLevel 
             && total < criticalLevel;
 
-         reachedWarningLevel;
+         return reachedWarningLevel;
 
     // var totalSettings = document.getElementsByClassName('totalSettings')
     //     return totalSettings.classList.add('warning');
@@ -111,7 +111,7 @@ module.exports = function SettingsBill() {
 
     function hasReachedCriticalLevel(){
         const total = grandTotal();
-           total >= criticalLevel;
+           return total >= criticalLevel;
 
         // totalSettings.remove('warning');
         //     return totalSettings.add('danger');
