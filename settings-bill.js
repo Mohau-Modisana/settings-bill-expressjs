@@ -103,13 +103,20 @@ module.exports = function SettingsBill() {
         const reachedWarningLevel = total >= warningLevel 
             && total < criticalLevel;
 
-        return reachedWarningLevel;
+         reachedWarningLevel;
+
+    // var totalSettings = document.getElementsByClassName('totalSettings')
+    //     return totalSettings.classList.add('warning');
     }
 
     function hasReachedCriticalLevel(){
         const total = grandTotal();
-        return total >= criticalLevel;
+           total >= criticalLevel;
+
+        // totalSettings.remove('warning');
+        //     return totalSettings.add('danger');
     }
+
 
     return {
         setSettings,

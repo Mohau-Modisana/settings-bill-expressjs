@@ -25,7 +25,8 @@ app.get('/', function(req, res){
 
     res.render('index', {
          settings: settingsBill.getSettings(),
-         totals: settingsBill.totals()
+         totals: settingsBill.totals(),
+         actions: settingsBill.hasReachedWarningLevel()
     });
 });
 
@@ -49,11 +50,13 @@ app.post('/action', function(req, res){
 });
 
 app.get('/actions', function(req, res){
-    res.render('actions', {actions: settingsBill.actions()});
+    res.render('actions', {
+        actions: settingsBill.actions(),
+    });
 });
 
-app.post('/actions/:actionType', function(req, res){
-    const actionType = req.params.actionType; 
+app.get('/actions/:type', function(req, res){
+    const actionType = req.params.type; 
     res.render('actions', {actions: settingsBill.actionsFor(actionType)});
 });
 
