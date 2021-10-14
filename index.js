@@ -21,9 +21,10 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+
 app.get('/', function(req, res){
 
-    res.render('index', {
+  res.render('index', {
          settings: settingsBill.getSettings(),
          totals: settingsBill.totals(),
          actions: settingsBill.hasReachedWarningLevel()
